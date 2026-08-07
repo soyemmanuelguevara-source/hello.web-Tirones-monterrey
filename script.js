@@ -47,7 +47,7 @@ if (ham && mob) {
 
 const phrases = [
   "remolques",
-  "cuatrimotos y razones",
+  "cuatrimotos y razors",
   "food trucks",
   "racks de bicicleta",
   "canastillas portaequipaje"

@@ -1,5 +1,5 @@
-const WHATSAPP_NUMBER = "";
-const DEFAULT_MESSAGE = "Hola, necesito asistencia vehicular con Tirones Monterrey.";
+const WHATSAPP_NUMBER = "528135662636";
+const DEFAULT_MESSAGE = "Hola, quiero información sobre tirones con Tirones Monterrey.";
 
 document.body.classList.add("loading");
 
@@ -46,10 +46,11 @@ if (ham && mob) {
 }
 
 const phrases = [
-  "remolque de vehículos",
-  "tirones seguros",
-  "auxilio en carretera",
-  "movilidad de emergencia"
+  "remolques",
+  "cuatrimotos y razones",
+  "food trucks",
+  "racks de bicicleta",
+  "canastillas portaequipaje"
 ];
 
 const twText = document.getElementById("twText");
@@ -147,11 +148,11 @@ if (form) {
 
     const data = new FormData(form);
     const message = [
-      "Hola, necesito asistencia vehicular con Tirones Monterrey.",
+      "Hola, quiero cotizar un tirón con Tirones Monterrey.",
       `Nombre: ${data.get("nombre")}`,
       `Telefono: ${data.get("telefono")}`,
-      `Tipo de ayuda: ${data.get("tipo")}`,
-      `Ubicacion/situacion: ${data.get("mensaje") || "No especificada"}`
+      `Qué necesita: ${data.get("tipo")}`,
+      `Vehiculo/detalles: ${data.get("mensaje") || "No especificado"}`
     ].join("\n");
 
     window.open(buildWhatsAppUrl(message), "_blank", "noopener,noreferrer");
